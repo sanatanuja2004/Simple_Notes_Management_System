@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/Add Notes.css">        
+    <script src="https://kit.fontawesome.com/0cc1064ad4.js" crossorigin="anonymous"></script>
+</head>
+
+{% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}   
+           <center class="one">{{ message }}</center>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+<body>
+    <section class="mydata">
+
+
+        <form class="myform" method="post">
+        <label><i class="fa-solid fa-envelope"></i>Title</label>
+        <input type="text" name="title" value="{{notesdata[1]}}" placeholder="" required/>
+        <label><i class="fa-solid fa-pen"></i>Content</label>
+        <textarea name="content" placeholder="Enter Content" required>{{notesdata[2]}}</textarea>
+        <button class="btn">Update</button>
+
+        </form>
+        
+    </section>    
+</body>
+</html>

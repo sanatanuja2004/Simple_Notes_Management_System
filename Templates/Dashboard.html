@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/Dashboard.css">
+</head>
+{% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}   
+           <center class="one">{{ message }}</center>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+<body>
+
+<nav class="navbar">
+
+    <div class="one">
+         
+        <button class="btn">Notes <i class="fa-solid fa-caret-down"></i> </button>
+
+        <div class="content">
+            <a href="{{url_for('addnotes')}}">Add Notes</a>
+            <a href="{{url_for('viewallnotes')}}">View All Notes</a>
+            <a href="{{url_for('getexceldata')}}">Get Excel</a>
+        </div>
+    </div>
+
+    <div class="one">
+  
+      <button class="btn">Files<i class="fa-solid fa-caret-down"></i></button>
+
+        <div class="content">
+            <a href="{{url_for('uploadfile')}}">Upload Files</a>
+            <a href="{{url_for('viewallfiles')}}">View All Files</a>
+        </div>
+    </div>
+{{session.get("user")}}
+
+    <a href="{{url_for('logout')}}"><button class="btn1">Logout</button></a>
+
+   <form method="post" action="{{url_for('search')}}">   <!-- action tag is used to get data only to that particular one-->
+    <input type="text" name="search_value" placeholder="Search"><i class="fas fa-search"></i>
+   
+</form>
+
+</nav> 
+</body>
+</html>

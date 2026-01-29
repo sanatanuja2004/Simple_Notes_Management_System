@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/Register.css">
+
+
+</head>
+{% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}   
+           <center class="one">{{ message }}</center>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+<body>
+    <section class="mydata">
+        <h1>Register</h1>
+        <form class="myform" method="post">
+
+            <label>Username</label>
+        <input type="text" name="uname" placeholder="Eg:John1" required/>
+
+            <label></i>Email</label>
+        <input type="email" name="uemail" placeholder="Eg:john1@gmail.com" required/>
+
+            <label>Password</label>
+        <input type="password" name="password" placeholder="Eg:john1" required/>
+
+            <button class="btn">Submit</button>
+
+
+        </form>
+    </section>
+</body>
+</html>

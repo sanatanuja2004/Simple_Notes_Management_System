@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/ViewAllNotes.css">
+
+</head>
+{% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}   
+           <center class="one">{{ message }}</center>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+<body>
+    <section class="mydata">
+
+<div class="one">
+
+    <table border="1px" cellspacing="0px" style="background-color:rgb(248, 204, 218); width: 500px;" >
+
+        <tr class="two">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Created Time</th>
+        <th>Links</th>
+        </tr>
+        {% for i in notesdata %}
+</div>
+        <tr>
+            <td>{{i[0]}}</td>
+            <td>{{i[1]}}</td>
+            <td>{{i[4]}}</td>
+            <td><a href="{{url_for('viewnotes',nid=i[0])}}">View</a></td>
+            <td><a href="{{url_for('updatenotes',nid=i[0])}}">Update</a></td>
+            <td><a href="{{url_for('deletenotes',nid=i[0])}}">Delete</a></td>
+
+        
+        </tr>
+        {% endfor %}
+        
+    </table>
+    </section>
+</body>
+</html>

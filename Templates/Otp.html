@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/Otp.css">
+    <script src="https://kit.fontawesome.com/0cc1064ad4.js" crossorigin="anonymous"></script>
+
+</head>
+
+
+
+<body>
+        <form class="mydata" method="post" >
+
+
+            <h2>Enter The OTP</h2>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}   
+           <center class="one">{{ message }}</center>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        <input type="text" name="userotp" placeholder="Eg:A1aB2b" required/>
+
+            <button class="btn">Submit</button>
+
+
+        </form>
+</body>
+</html>

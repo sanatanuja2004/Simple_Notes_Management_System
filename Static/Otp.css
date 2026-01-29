@@ -1,0 +1,47 @@
+body{
+    font-family: sans-serif;
+    background-color: rgb(214, 246, 235);
+
+}
+.mydata{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-left: 35%;
+    padding: 35px;
+    box-shadow: 2px 3px 15px gray;  
+    margin-top: 10%;  
+    background-color: white;
+
+}
+
+.mydata h2{
+    text-align: center;
+    background-color: white;
+    color: rgb(232, 35, 35);
+
+}
+
+.mydata input{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    margin-bottom: 1%;
+    width: 100px;
+    margin-left: 35%;
+}
+
+.btn{
+    background-color: blue;
+    color: white;
+    padding: 6px;
+    border: none;
+    border-radius: 7px;
+    width: 100px;
+    margin-left: 145px;
+    margin-top: 10%;
+
+}
+.one{
+    color: black;
+}

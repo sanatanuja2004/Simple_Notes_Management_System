@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/Login.css">    
+    
+</head>
+
+ {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}   
+           <center class="one">{{ message }}</center>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+<body>
+    <section class="mydata" >
+
+        <h1>Login</h1>
+
+        <form class="myform" method="post">
+
+        <label></i>Email</label>
+        <input type="text" name="uemail" placeholder="Eg:Enter Registered Email" required/>
+
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Eg:john1" required/>
+
+        <button class="btn">Submit</button>
+
+        </form>
+        
+    </section>    
+</body>
+</html>

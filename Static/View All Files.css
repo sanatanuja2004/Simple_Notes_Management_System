@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(214, 246, 235);
+}.one{
+    margin-left: 32%;
+    width: 50%;
+}
+
+.mydata{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-left: 20%;
+    padding: 7vh;
+    margin-top: 15%; 
+   
+}
+
